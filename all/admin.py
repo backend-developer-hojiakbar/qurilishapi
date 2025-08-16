@@ -166,7 +166,7 @@ class PaymentAdmin(admin.ModelAdmin):
             if overdue_data.get('overdue_payments'):
                 self.message_user(
                     request,
-                    f"{payment.user.fio if payment.user else 'Noma\'lum foydalanuvchi'} uchun {len(overdue_data['overdue_payments'])} ta muddati o‘tgan to‘lov topildi, jami: {overdue_data['total_overdue']} so‘m!"
+                    f"{payment.user.fio if payment.user else 'Nomalum foydalanuvchi'} uchun {len(overdue_data['overdue_payments'])} ta muddati o‘tgan to‘lov topildi, jami: {overdue_data['total_overdue']} so‘m!"
                 )
         self.message_user(request, "Muddati o‘tgan to‘lovlar tekshirildi!")
 
